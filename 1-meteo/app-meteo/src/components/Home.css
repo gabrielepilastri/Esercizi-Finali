@@ -3,15 +3,6 @@ body{
     justify-content: center;
 }
 
-.top-nav input{
-    height: 2.5em;
-    border-radius: 25px;
-}
-
-.main{
-    width: 450px;
-}
-
 .single-card{
     border:2px solid white;
     border-radius: 15px;
@@ -23,14 +14,14 @@ body{
 }
 
 .single-card img {
-    margin-left: 1em; 
+    margin-left: 0.5em; 
     margin-right: 1em;
 }
 
 .cards{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
 }
 
 .flex{
@@ -46,10 +37,15 @@ body{
 
 .card-title{
     font-weight: bold;
+    margin-left: -10px;
+}
+
+.card-text{
+    margin-right: 1em;
 }
 
 .city{
-    text-align: center;
+    margin-left: 30px;
     color: rgb(148, 37, 37);
     font-size: 3.5em;
     line-height: 0;
@@ -69,4 +65,47 @@ p{
     font-weight: bold;
     color: white;
     text-align: end;
+}
+
+.minmax{
+    color: rgb(43, 2, 2);
+}
+
+
+
+
+@media screen and (max-width: 768px){
+    .top-nav input{
+        height: 2.5em;
+        border-radius: 25px;
+    }
+    
+    .main{
+        width: 400px;
+    }
+
+    .city{
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .cards{
+        justify-content: center;
+    }
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
 }
