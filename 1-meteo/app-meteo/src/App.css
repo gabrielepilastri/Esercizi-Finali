@@ -60,13 +60,13 @@ button{
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 637px) {
   .topSearch{
     justify-content: center;
   }
 
   .container{
-    width: auto;
+    width: 90vw;
     border-radius: 25px;
     margin-top: 3em;
     margin: auto;

@@ -7,7 +7,7 @@ body{
     border:2px solid white;
     border-radius: 15px;
     background-image:linear-gradient(180deg, #962a2a 0%, #936823 100%);
-    width: 300px;
+    width: auto;
     height: 80px;
     margin: 0.5em;
 
@@ -74,7 +74,7 @@ p{
 
 
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 637px){
     .top-nav input{
         height: 2.5em;
         border-radius: 25px;
@@ -82,6 +82,7 @@ p{
     
     .main{
         width: 400px;
+        margin: auto;
     }
 
     .city{
@@ -93,6 +94,9 @@ p{
         justify-content: center;
     }
     
+    .single-card{
+        width: auto;
+    }
 
     
 

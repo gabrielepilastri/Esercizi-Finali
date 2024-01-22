@@ -11,9 +11,9 @@ function App() {
   const [searched, setSearched] = useState("");
   const city = useSelector((state) => state.weather.city);  //prendo lo stato di city per implementare il sunrise
   const [currentTime, setCurrentTime] = useState(new Date());
-  const sunrise = city.sys.sunrise
+  const sunrise = city?.sys?.sunrise
   const sun = new Date(sunrise)
-  const sunset = city.sys.sunset
+  const sunset = city?.sys?.sunset
   const set = new Date(sunset)
 
 
@@ -59,9 +59,9 @@ function App() {
         <h3 className="orario">{currentTime.toLocaleString()}</h3>
 
         <Home search={searched} />
-        <div>
+        <div className="grafico">
           <hr />
-          grafico
+         
         </div>
       </div>
       
@@ -78,7 +78,7 @@ function App() {
 
                             <div className="center">
                             <Card.Title>Sunrise</Card.Title>
-                            <Card.Text>{sun.toLocaleTimeString()}</Card.Text>
+                            <Card.Text>{sun.toLocaleTimeString()}</Card.Text> {/*   provando ad ottenere l'orario dell'alba, ma mi esce una data del 1970*/}
                             </div>
                         </div>
 
