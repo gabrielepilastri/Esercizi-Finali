@@ -78,7 +78,7 @@ function App() {
 
                             <div className="center">
                             <Card.Title>Sunrise</Card.Title>
-                            <Card.Text>{sun.toLocaleTimeString()}</Card.Text> {/*   provando ad ottenere l'orario dell'alba, ma mi esce una data del 1970*/}
+                            <Card.Text>{sun.toLocaleString()}</Card.Text> {/*   provando ad ottenere l'orario dell'alba, ma mi esce una data del 1970*/}
                             </div>
                         </div>
 
