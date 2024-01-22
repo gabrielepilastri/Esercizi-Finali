@@ -1,0 +1,33 @@
+.topSearch{
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.container{
+  border: 2px solid white;
+  border-radius: 25px;
+  margin-top: 3em;
+  opacity: 80%;
+  background-color: rgba(0, 0, 0, 0.591);
+  padding-bottom: 1em;
+}
+
+.input{
+  height: 3em;
+  width: 20em;
+  margin-right: 1em;
+  margin-top: 2em;
+  border: none;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.866);
+}
+
+button{
+  height: 3em;
+  width: 5em;
+  color: white;
+  border-radius: 25px;
+  border: 2px solid white;
+  background-color: rgb(149, 49, 49);
+}
