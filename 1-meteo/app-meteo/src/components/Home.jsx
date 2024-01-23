@@ -5,10 +5,19 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setCity, setCity2 } from "../reducers/fetchSlice";
 
+
+
 const Home = ({ search }) => {
   const dispatch = useDispatch();
   const city = useSelector((state) => state.weather.city);
   const city2 = useSelector((state) => state.weather.city2);
+
+
+
+
+  
+
+
 
   // const location = useLocation;
   // const params = new URLSearchParams(location.search).get("search");
@@ -16,7 +25,7 @@ const Home = ({ search }) => {
   let url = `https://api.openweathermap.org/data/2.5/weather?q=${search},it&APPID=${API_KEY}&units=metric`;
   let tomorrow = `https://api.openweathermap.org/data/2.5/forecast?q=${search},it&appid=${API_KEY}&units=metric`;
 
-  useEffect(() => {
+  useEffect(() => {    // all'avvio eseguo la fetch di entrambi gli url tramite la slice 
     const fetchData = async () => {
       try {
         const res = await fetch(url);
@@ -60,7 +69,7 @@ const Home = ({ search }) => {
   return (
     <>
       <div className="main">
-        <h1 className="city">{city.name}</h1>
+        <h1 className="city">{city.name}, {city.weather[0].description}</h1>
         <p className="pa">{city?.weather?.description}</p>
         <div className="cards">
           <Card className="single-card">
@@ -126,25 +135,7 @@ const Home = ({ search }) => {
               </div>
             </CardBody>
           </Card>
-          <Card className="single-card">
-            <CardBody>
-              <div className="flex">
-                <Card.Img
-                  width={40}
-                  src="src/assets/temperature-three-quarters-solid.svg"
-                />
-
-                <div className="center">
-                  <Card.Title className="card-title">Tomorrow</Card.Title>
-                  {city2 && city2.list && (
-                    <Card.Text className="card-text">
-                      {city2?.list[8]?.main?.temp.toFixed()} °C
-                    </Card.Text>
-                  )}
-                </div>
-              </div>
-            </CardBody>
-          </Card>
+         
         </div>
       </div>
     </>
