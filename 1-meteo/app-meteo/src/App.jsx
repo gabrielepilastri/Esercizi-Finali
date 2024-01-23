@@ -121,7 +121,7 @@ function App() {
               margin={{ top: 5, right: 20, left: 10, bottom: 5 }}
             >
               <XAxis dataKey="name" />
-              <YAxis domain={[0, 30]} />
+              <YAxis domain={[-10, 30]} />
               <Tooltip />
               <CartesianGrid stroke="#f5f5f5" />
               <Line
