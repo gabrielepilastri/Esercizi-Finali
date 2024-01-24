@@ -1,3 +1,4 @@
+import { Button } from "bootstrap";
 
 
 const Home = () => {
@@ -6,7 +7,10 @@ const Home = () => {
 
 
   return (
-    <h1>Job Finder</h1>
+    <>
+      <h1>Job Finder</h1>
+      <Button>Favourites</Button>
+    </>
   )
 }
 
