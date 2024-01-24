@@ -3,18 +3,19 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './components/Home'
 import MyNavbar from './components/MyNavbar';
+import Favourites from './components/Favourites';
 
 function App() {
 
   return (
     <>
-      <MyNavbar/>
+        <MyNavbar/>
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home/>} />
-            
+            <Route path="/favourites" element={<Favourites/>} />
           </Routes>
-        </BrowserRouter>
+        </BrowserRouter>           
     </>
   )
 }
