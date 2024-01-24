@@ -9,12 +9,15 @@ export const favSlice = createSlice({
     },
     reducers: {
         addFav: (state, action) => {
-            state.value = action.payload
+            state.value.push(action.payload)
+        },
+        delFav: (state, action) => {
+            state.value =  state.value.filter((title) => title !== action.payload)
         }
     }
 })
 
 
-export const { addFav } = favSlice.actions;
+export const { addFav, delFav } = favSlice.actions;
 
 export const favReducer = favSlice.reducer

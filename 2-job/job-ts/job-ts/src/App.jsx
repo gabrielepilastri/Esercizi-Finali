@@ -9,8 +9,9 @@ function App() {
 
   return (
     <>
-        <MyNavbar/>
+       
         <BrowserRouter>
+         <MyNavbar/>
           <Routes>
             <Route path="/" element={<Home/>} />
             <Route path="/favourites" element={<Favourites/>} />

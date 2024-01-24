@@ -1,5 +1,6 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { jobReducer } from "./jobSlice";
+import { favReducer } from "./favSlice";
 
 
 
@@ -8,5 +9,6 @@ import { jobReducer } from "./jobSlice";
 export default configureStore({
     reducer: {
         jobs: jobReducer,
+        fav: favReducer
     },
 })

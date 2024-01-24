@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import JobCard from "./JobCard";
+import { getJobs } from "../redux/jobSlice";
 
 
 const Home = () => {
@@ -19,13 +20,10 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(API_KEY + input + "&limit=20");
-        if(response.ok) {
+        
           const { data } = await response.json();
           dispatch(getJobs(data));
           console.log(jobs)
-        } else {
-            console.log("erroraccio")
-        }
       } catch (err) {
         console.log(err)
     }
@@ -37,14 +35,14 @@ const Home = () => {
     <>
       <Container>
         <Row>
-          <Col className="col">
-            <h1>Job Finder</h1>
-            <input type="text" onChange={handleinput} placeholder="Type and press the search button" />
+          <Col className="col-12">
+            
+            <input className="my-4" type="text" onChange={handleinput} placeholder="Type and press the search button" />
             <Button onClick={fetchData}>Search</Button>
           </Col>
           <Col>
             {jobs.map((job) => (
-              <JobCard/>
+              <JobCard key={job._id} data={job} />
             ))}
           </Col>
         </Row>
