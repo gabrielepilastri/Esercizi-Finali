@@ -35,12 +35,12 @@ body{
 }
 
 button{
-  height: 3em;
+  /* height: 3em;
   width: 5em;
   color: white;
   border-radius: 25px;
   border: 2px solid white;
-  background-color: #368BCA;
+  background-color: #368BCA; */
 }
 
 .orario{
@@ -69,7 +69,7 @@ button{
 .immagine{
   margin-right: 1em;
 }
-
+/* 
 
 @media screen and (max-width: 637px) {
   .topSearch{
@@ -92,7 +92,7 @@ button{
 
   .city{
     font-size: 2em;
-  }
+  } */
   
   
 

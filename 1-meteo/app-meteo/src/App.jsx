@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import Home from "./components/Home";
 import "./App.css";
-import { Card, CardBody } from "react-bootstrap";
+import { Button, Card, CardBody } from "react-bootstrap";
 import { useSelector } from "react-redux";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {
   LineChart,
@@ -94,7 +96,7 @@ function App() {
     <>
       <div className="split">
         <div className="container">
-          <div className="topSearch">
+          <div className="topSearch text-center">
             <input
               className="input"
               type="text"
@@ -103,9 +105,9 @@ function App() {
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
-            <button type="button" onClick={() => handleSearch()}>
+            <Button variant="info" type="button" onClick={() => handleSearch()}>
               Cerca
-            </button>
+            </Button>
           </div>
           <h3 className="orario">{currentTime.toLocaleString()}</h3>
 
