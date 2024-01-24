@@ -69,7 +69,7 @@ const Home = ({ search }) => {
   return (
     <>
       <div className="main">
-        <h1 className="city">{city.name}, {city.weather[0].description}</h1>
+        {city?.weather?.[0] &&  (<h1 className="city">{city.name}, {city.weather[0].description}</h1>)}
         <p className="pa">{city?.weather?.description}</p>
         <div className="cards">
           <Card className="single-card">
