@@ -111,7 +111,7 @@ function App() {
                 </div>
               </CardBody>
             </Card>
-            <Card style={{height:"140px", width:"20vw",  backgroundSize:"cover", backgroundPositionY:"center", backgroundImage:"url('../src/assets/tramonto.jpeg')"}} className="sun-card single-card">
+            <Card style={{height:"140px", width:"20vw",  backgroundSize:"cover", backgroundPositionY:"bottom", backgroundImage:"url('../src/assets/tramonto.jpeg')"}} className="sun-card single-card">
               <CardBody>
                 <div className="d-flex fs-4">
                   <Card.Img style={{width: "60px", height:"60px"}} src="src/assets/sun-solid (1).svg" />
@@ -149,7 +149,7 @@ function App() {
               <CardBody>
                 <div className="d-flex fs-4">
                   <Card.Img style={{width: "60px", height:"60px"}}
-                    src="src/assets/temperature-three-quarters-solid.svg"
+                    src="src/assets/cloud-rain-solid.svg"
                   />
 
                   <div className="center ms-3">

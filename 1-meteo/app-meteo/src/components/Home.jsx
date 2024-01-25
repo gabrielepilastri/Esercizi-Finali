@@ -13,7 +13,7 @@ const Home = ({ search }) => {
   // const location = useLocation;
   // const params = new URLSearchParams(location.search).get("search");
   const API_KEY = "9c02f504c8276546a1ce94b65b497967";
-  let url = `https://api.openweathermap.org/data/2.5/weather?q=${search},it&APPID=${API_KEY}&units=metric`;
+  let url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&APPID=${API_KEY}&units=metric`;
   let tomorrow = `https://api.openweathermap.org/data/2.5/forecast?q=${search},it&appid=${API_KEY}&units=metric`;
 
   useEffect(() => {
@@ -174,7 +174,7 @@ const Home = ({ search }) => {
                   <Card.Img
                     style={{ width: "60px", height: "60px" }}
                     width={40}
-                    src="src/assets/percent-solid.svg"
+                    src="src/assets/droplet-solid.svg"
                   />
 
                   <div className="center">
