@@ -35,45 +35,20 @@ function App() {
   const set = new Date(sunset);
 
   const data = [  //con il ciclo stavo riscontrando delle difficoltà quindi ho fatto questa cosa orrenda
-    { name: "", temp: city2?.list[0]?.main?.temp.toFixed() },
-    { name: "", temp: city2?.list[1]?.main.temp.toFixed() },
     { name: "", temp: city2?.list[2]?.main?.temp.toFixed() },
-    { name: "", temp: city2?.list[3]?.main?.temp.toFixed() },
-    { name: "", temp: city2?.list[4]?.main?.temp.toFixed() },
     { name: "", temp: city2?.list[5]?.main?.temp.toFixed() },
-    { name: "", temp: city2?.list[6]?.main?.temp.toFixed() },
-    { name: "", temp: city2?.list[7]?.main?.temp.toFixed() },
     { name: "1 day", temp: city2?.list[8]?.main?.temp.toFixed() },
-    { name: "", temp: city2?.list[9]?.main?.temp.toFixed() },
-    { name: "", temp: city2?.list[10]?.main?.temp.toFixed() },
     { name: "", temp: city2?.list[11]?.main?.temp.toFixed() },
-    { name: "", temp: city2?.list[12]?.main?.temp.toFixed() },
-    { name: "", temp: city2?.list[13]?.main.temp.toFixed() },
     { name: "", temp: city2?.list[14]?.main?.temp.toFixed() },
-    { name: "", temp: city2?.list[15]?.main?.temp.toFixed() },
     { name: "2 days", temp: city2?.list[16]?.main?.temp.toFixed() },
-    { name: "", temp: city2?.list[17]?.main?.temp.toFixed() },
     { name: "", temp: city2?.list[18]?.main?.temp.toFixed() },
-    { name: "", temp: city2?.list[19]?.main?.temp.toFixed() },
-    { name: "", temp: city2?.list[20]?.main?.temp.toFixed() },
     { name: "", temp: city2?.list[21]?.main?.temp.toFixed() },
-    { name: "", temp: city2?.list[22]?.main?.temp.toFixed() },
-    { name: "", temp: city2?.list[23]?.main?.temp.toFixed() },
     { name: "3 days", temp: city2?.list[24]?.main?.temp.toFixed() },
-    { name: "", temp: city2?.list[25]?.main.temp.toFixed() },
     { name: "", temp: city2?.list[26]?.main?.temp.toFixed() },
-    { name: "", temp: city2?.list[27]?.main?.temp.toFixed() },
-    { name: "", temp: city2?.list[28]?.main?.temp.toFixed() },
     { name: "", temp: city2?.list[29]?.main?.temp.toFixed() },
-    { name: "", temp: city2?.list[30]?.main?.temp.toFixed() },
-    { name: "", temp: city2?.list[31]?.main?.temp.toFixed() },
     { name: "4 days", temp: city2?.list[32]?.main?.temp.toFixed() },
-    { name: "", temp: city2?.list[33]?.main?.temp.toFixed() },
     { name: "", temp: city2?.list[34]?.main?.temp.toFixed() },
-    { name: "", temp: city2?.list[35]?.main?.temp.toFixed() },
-    { name: "", temp: city2?.list[36]?.main?.temp.toFixed() },
-    { name: "", temp: city2?.list[37]?.main.temp.toFixed() },
-    { name: "", temp: city2?.list[38]?.main?.temp.toFixed() },
+    { name: "", temp: city2?.list[37]?.main?.temp.toFixed() },
     { name: "5 days", temp: city2?.list[39]?.main?.temp.toFixed() },
   ];
 
@@ -94,30 +69,110 @@ function App() {
 
   return (
     <>
-      <div className="split">
+      <div className="split d-flex gap-4">
         <div className="container">
-          <div className="topSearch text-center">
+          <div className="topSearch text-center d-flex mt-3 ms-1">
             <input
-              className="input"
+              className="input py-1 rounded border border-none me-2"
               type="text"
               name="search"
-              placeholder="Search city"
+              placeholder="type and press search"
               value={search}
               onChange={(e) => setSearch(e.target.value)}
             />
             <Button variant="info" type="button" onClick={() => handleSearch()}>
-              Cerca
+              Search
             </Button>
           </div>
-          <h3 className="orario">{currentTime.toLocaleString()}</h3>
+          <h3 className="orario mt-2 text-light">{currentTime.toLocaleString()}</h3>
 
           <Home search={searched} />
-          <div className="grafico">
-            <hr />
-            <p>Temperature nei prossimi 5 giorni</p>
+          
+         
+        </div>
 
+        
+        {city.name == undefined? null : 
+        <div className="sideContainer p-3">  
+          <div>
+            <h4 className="city fs-2">Sunrise & Sunset</h4>
+            <div className="rise-set d-flex">
+            
+            <Card style={{height:"140px", width:"20vw",  backgroundSize:"cover", backgroundPositionY:"center", backgroundImage:"url('../src/assets/alba.jpeg')"}} className="sun-card single-card me-3">
+              <CardBody>
+                <div className="d-flex fs-4">
+                  <Card.Img style={{width: "60px", height:"60px"}} src="src/assets/sun-solid (1).svg" />
+
+                  <div className="center ms-3">
+                    <Card.Text className="card-title">Sunrise</Card.Text>
+                    <Card.Text className="card-text">{sun.toLocaleTimeString()}</Card.Text>{" "}
+                    {/*   provando ad ottenere l'orario dell'alba, ma mi esce una data del 1970*/}
+                  </div>
+                </div>
+              </CardBody>
+            </Card>
+            <Card style={{height:"140px", width:"20vw",  backgroundSize:"cover", backgroundPositionY:"center", backgroundImage:"url('../src/assets/tramonto.jpeg')"}} className="sun-card single-card">
+              <CardBody>
+                <div className="d-flex fs-4">
+                  <Card.Img style={{width: "60px", height:"60px"}} src="src/assets/sun-solid (1).svg" />
+
+                  <div className="center ms-3">
+                    <Card.Text className="card-title">Sunset</Card.Text>
+                    <Card.Text className="card-text">{set.toLocaleTimeString()}</Card.Text>
+                  </div>
+                </div>
+              </CardBody>
+            </Card>
+            </div>
+            <h4 className="city fs-2">Tomorrow</h4>
+            <div className="tomorrow d-flex">
+            <Card style={{height:"140px", width:"20vw",  backgroundSize:"cover", backgroundPositionY:"center", backgroundImage:"url('../src/assets/temperatura.jpeg')"}} className="single-card me-3">
+              <CardBody>
+                <div className="d-flex fs-4">
+                  <Card.Img style={{width: "60px", height:"60px"}}
+                    src="src/assets/temperature-three-quarters-solid.svg"
+                  />
+
+                  <div className="center ms-3">
+                    <Card.Text className="card-title">Tomorrow Temperature</Card.Text>
+                    {city2 && city2.list && (
+                      <Card.Text className="card-text">
+                        {city2?.list[8]?.main?.temp} °C
+                      </Card.Text>
+                    )}
+                  </div>
+                </div>
+              </CardBody>
+            </Card>
+
+            <Card style={{height:"140px", width:"20vw",  backgroundSize:"cover", backgroundPositionY:"center", backgroundImage:"url('../src/assets/pioggia.jpeg')"}} className="single-card">
+              <CardBody>
+                <div className="d-flex fs-4">
+                  <Card.Img style={{width: "60px", height:"60px"}}
+                    src="src/assets/temperature-three-quarters-solid.svg"
+                  />
+
+                  <div className="center ms-3">
+                    <Card.Text className="card-title">Tomorrow <br /> Rain Chance</Card.Text>
+                    {city2 && city2.list && (
+                      <Card.Text className="card-text">
+                        {city2?.list[8]?.main?.temp.toFixed()} °C
+                      </Card.Text>
+                    )}
+                  </div>
+                </div>
+              </CardBody>
+            </Card>
+            </div>
+           
+          </div>
+        
+
+        {city.name == undefined? null : <div className="grafico">
+            <hr />
+            <p className="fw-bold text-light fs-4">Temperature nei prossimi 5 giorni</p>
             <LineChart
-              width={800}
+              width={650}
               height={200}
               data={data}
               margin={{ top: 5, right: 20, left: 10, bottom: 5 }}
@@ -133,60 +188,9 @@ function App() {
                 yAxisId={0}
               />
             </LineChart>
-          </div>
-        </div>
+          </div>}
+          </div>}
 
-        <div className="sideContainer">
-          <div></div>
-          <div>
-            <h2>Sunrise & Sunset</h2>
-            <Card className="sun-card">
-              <CardBody>
-                <div className="flex">
-                  <Card.Img className="immagine" width={40} src="src/assets/sun-solid (1).svg" />
-
-                  <div className="center">
-                    <Card.Title>Sunrise</Card.Title>
-                    <Card.Text>{sun.toLocaleTimeString()}</Card.Text>{" "}
-                    {/*   provando ad ottenere l'orario dell'alba, ma mi esce una data del 1970*/}
-                  </div>
-                </div>
-              </CardBody>
-            </Card>
-            <Card className="sun-card">
-              <CardBody>
-                <div className="flex">
-                  <Card.Img className="immagine" width={40} src="src/assets/sun-solid.svg" />
-
-                  <div className="center">
-                    <Card.Title>Sunset</Card.Title>
-                    <Card.Text>{set.toLocaleTimeString()}</Card.Text>
-                  </div>
-                </div>
-              </CardBody>
-            </Card>
-
-            <Card className="single-card">
-              <CardBody>
-                <div className="flex">
-                  <Card.Img
-                    width={40}
-                    src="src/assets/temperature-three-quarters-solid.svg"
-                  />
-
-                  <div className="center">
-                    <Card.Title className="card-title">Tomorrow</Card.Title>
-                    {city2 && city2.list && (
-                      <Card.Text className="card-text">
-                        {city2?.list[8]?.main?.temp.toFixed()} °C
-                      </Card.Text>
-                    )}
-                  </div>
-                </div>
-              </CardBody>
-            </Card>
-          </div>
-        </div>
       </div>
     </>
   );

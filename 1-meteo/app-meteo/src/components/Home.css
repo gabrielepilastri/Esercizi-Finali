@@ -1,3 +1,35 @@
+.city{
+    color: #368BCA;
+    font-size: 3.5em;
+    line-height: 1em;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+}
+
+.card-title, .card-text{
+    font-weight: bold;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: white;
+    color: black;
+    line-height: 1em;
+}
+
+.minmax{
+    font-size: small;
+    -webkit-text-stroke-width: 0;
+    color: white;
+}
+
+.single-card{
+    width: 20vw;
+    min-height: 140px;
+    background-size: cover;
+}
+
+.single-card:hover{
+    transform:scale(1.08);
+}
+
 /* body{
     display: flex;
     justify-content: center;
@@ -72,22 +104,12 @@ p{
 }
 
 
-
+*/
 
 @media screen and (max-width: 637px){
-    .top-nav input{
-        height: 2.5em;
-        border-radius: 25px;
-    }
-    
-    .main{
-        width: 400px;
-        margin: auto;
-    }
-
     .city{
         text-align: center;
-        margin-left: 0;
+        margin:auto;
     }
 
     .cards{
@@ -95,10 +117,19 @@ p{
     }
     
     .single-card{
-        width: auto;
+        width: 300px;
+        min-height: 100px;
+        max-height:100px;
+      }
+
+    .wimg{
+        width: 60px;
     }
 
-    
+    .card-text{
+        line-height: 0.8;
+    }
+
 
     
 
@@ -112,4 +143,6 @@ p{
 
     
 
-} */
+    
+
+} 

@@ -1,9 +1,17 @@
 body{
-  margin: 0;
+  margin: 2em;
   padding: 0;
   box-sizing: border-box;
   background-image: url('../src/assets/sfondo-meteo.jpg');
-  background-position-y:center;
-  background-size: 100%;
+  background-position-y:-5em;
+  background-size:cover;
 }
 
+@media screen and (max-width: 376px) {
+  body{
+    background-image: url('../src/assets/meteoiphone7.jpeg');
+    background-position-y:0;
+    background-size:100%;
+    margin: 0;
+  }
+}

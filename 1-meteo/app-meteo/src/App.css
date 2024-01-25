@@ -1,4 +1,13 @@
-body{
+.split{
+  margin-top: 2em;
+}
+
+.container, .sideContainer{
+  border: 2px solid white;
+  border-radius: 25px;
+}
+
+/* body{
   display: flex;
   justify-content: left;
 }
@@ -35,12 +44,12 @@ body{
 }
 
 button{
-  /* height: 3em;
+  height: 3em;
   width: 5em;
   color: white;
   border-radius: 25px;
   border: 2px solid white;
-  background-color: #368BCA; */
+  background-color: #368BCA;
 }
 
 .orario{
@@ -69,17 +78,23 @@ button{
 .immagine{
   margin-right: 1em;
 }
-/* 
 
-@media screen and (max-width: 637px) {
+ */
+@media screen and (max-width: 376px) {
+
+  .split{
+    margin: 0;
+  }
+
   .topSearch{
     justify-content: center;
   }
 
   .container{
-    width: 90vw;
-    border-radius: 25px;
-    margin-left: 1em;
+    width: 100vw;
+    height: 80vh;
+    border: none;
+    text-align: center;
   }
 
   .sideContainer{
@@ -92,7 +107,9 @@ button{
 
   .city{
     font-size: 2em;
-  } */
+  }
+
+
   
   
 
