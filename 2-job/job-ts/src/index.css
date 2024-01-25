@@ -1,0 +1,18 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url("../src/assets/jobsfondoo.jpeg");
+  background-size: 70%;
+  background-position-x:17.5em ;
+  height: 100vh;
+  background-attachment: fixed;
+}
+
+@media screen and (max-width:376px) {
+  body{
+    background-size: 200%;
+    background-position-x:center;
+    background-position-y: center;
+  }
+}

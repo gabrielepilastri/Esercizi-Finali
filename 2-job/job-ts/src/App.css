@@ -1,0 +1,52 @@
+.jobb{
+    width: 450px;
+    height: 190px;
+    border: 2px solid white;
+    border-radius: 25px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background:linear-gradient(to bottom, #36DFFF, #00284B)
+}
+
+.innerjobb{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.innerjobb a {
+    color: white;
+}
+
+.bgFav{
+    background:linear-gradient(to bottom, #36DFFF, #00284B);
+    margin-bottom: 1em;
+    border-radius: 25px;
+}
+
+.toggle{
+    color: red;
+    background-color: red;
+}
+
+@media screen and (max-width: 376px) {
+    .jobb{
+        width: 250px;
+        min-height: 120px;
+        max-height: 150px;
+    }
+
+    .bgFav{
+        width: 250px;
+        height: 85px;
+    }
+
+    .list{
+        display: flex;
+        align-items: center;
+    }
+}
