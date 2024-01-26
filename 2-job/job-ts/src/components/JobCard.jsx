@@ -2,11 +2,18 @@ import { Button, Col } from "react-bootstrap";
 import { useDispatch } from "react-redux"
 import { addFav } from "../redux/favSlice";
 import '../App.css'
+import { useState } from "react";
 
 
 
 const JobCard = ({data}) => {
     const dispatch = useDispatch();
+    const [clicked, setClicked] = useState(false)
+
+    const handleCLick = () => {
+        dispatch(addFav(data.title));
+        setClicked(true);
+    }
 
     return(
         <>
@@ -14,7 +21,7 @@ const JobCard = ({data}) => {
             <Col className="col-12"><h3>{data.company_name}</h3></Col>
             <Col className="col-12 innerjobb">
                 <a href={data.url}>{data.title}</a>
-                <Button className="ms-3 pb-2" variant="warning" onClick={()=> dispatch(addFav(data.title))}> <img src="../src/assets/star-solid.svg" alt="img star" width={20} />  </Button>
+                <Button className="ms-3 pb-2 bottone"  variant={clicked ==true ?"success" :"warning"} onClick={handleCLick} > <img src="../src/assets/star-solid.svg" alt="img star" width={20} />  </Button>
             </Col>
             </div>
         </>
@@ -22,3 +29,5 @@ const JobCard = ({data}) => {
 }
 
 export default JobCard;
+
+// onClick={handleCLick}

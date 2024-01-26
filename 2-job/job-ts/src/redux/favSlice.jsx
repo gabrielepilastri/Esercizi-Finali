@@ -6,13 +6,16 @@ export const favSlice = createSlice({
     name: 'fav',
     initialState: {
         value: [],
+
     },
     reducers: {
         addFav: (state, action) => {
-            state.value.push(action.payload)
+            state.value.push(action.payload);
+            
         },
         delFav: (state, action) => {
-            state.value =  state.value.filter((title) => title !== action.payload)
+            state.value =  state.value.filter((title) => title !== action.payload);
+            
         }
     }
 })
