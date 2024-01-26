@@ -78,14 +78,14 @@ const Home = ({ search }) => {
           )}
         </div>
         <p className="pa">{city?.weather?.description}</p>
-        <div className="cards d-flex flex-wrap">
+        <div className="cards d-flex flex-wrap justify-content-between">
 
         {city.name == undefined ? null : (
             <Card
               style={{
                 backgroundImage: "url('../src/assets/temperatura.jpeg')",
               }}
-              className="single-card mx-2 my-2"
+              className="single-card mx-2 my-2 my-5"
             >
               <CardBody>
                 <div className="d-flex fs-4">
@@ -117,7 +117,7 @@ const Home = ({ search }) => {
             {city.name == undefined ? null : (
             <Card
               style={{ backgroundImage: "url('../src/assets/pioggia.jpeg')", backgroundPositionY:"center"}}
-              className="single-card mx-2 my-2"
+              className="single-card mx-2 my-2 my-5"
             >
               <CardBody>
                 <div className="d-flex fs-4">
@@ -144,7 +144,7 @@ const Home = ({ search }) => {
                 backgroundPositionY: "center",
                 backgroundImage: "url('../src/assets/vento.jpeg')",
               }}
-              className="single-card mx-2 my-2"
+              className="single-card mx-2 my-2 mt-3"
             >
               <CardBody>
                 <div className="d-flex fs-4">
@@ -167,7 +167,7 @@ const Home = ({ search }) => {
           {city.name == undefined ? null : (
             <Card
               style={{ backgroundImage: "url('../src/assets/umidità.jpeg')" }}
-              className="single-card mx-2 my-2"
+              className="single-card mx-2 my-2 mt-3"
             >
               <CardBody>
                 <div className="d-flex fs-4">
