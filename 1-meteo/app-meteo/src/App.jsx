@@ -90,8 +90,8 @@ function App() {
         {city.name == undefined ? null : (
           <div className="sideContainer p-3 col-6">
             <div>
-              <h4 className="city fs-2">Sunrise & Sunset</h4>
-              <div className="rise-set d-flex">
+              <h4 className="city">Sunrise & Sunset</h4>
+              <div className="rise-set d-flex justify-content-around">
                 <Card
                   style={{
                     height: "140px",
@@ -100,7 +100,7 @@ function App() {
                     backgroundPositionY: "center",
                     backgroundImage: "url('../src/assets/alba.jpeg')",
                   }}
-                  className="sun-card single-card me-3"
+                  className="sun-card single-card me-3 border border-white"
                 >
                   <CardBody>
                     <div className="d-flex fs-4">
@@ -127,7 +127,7 @@ function App() {
                     backgroundPositionY: "bottom",
                     backgroundImage: "url('../src/assets/tramonto.jpeg')",
                   }}
-                  className="sun-card single-card"
+                  className="sun-card single-card border border-white"
                 >
                   <CardBody>
                     <div className="d-flex fs-4">
@@ -146,8 +146,8 @@ function App() {
                   </CardBody>
                 </Card>
               </div>
-              <h4 className="city fs-2">Tomorrow</h4>
-              <div className="tomorrow d-flex">
+              <h4 className="city">Tomorrow</h4>
+              <div className="tomorrow d-flex justify-content-around">
                 <Card
                   style={{
                     height: "140px",
@@ -156,7 +156,7 @@ function App() {
                     backgroundPositionY: "center",
                     backgroundImage: "url('../src/assets/temperatura.jpeg')",
                   }}
-                  className="single-card me-3"
+                  className="single-card me-3 border border-white"
                 >
                   <CardBody>
                     <div className="d-flex fs-4">
@@ -187,7 +187,7 @@ function App() {
                     backgroundPositionY: "center",
                     backgroundImage: "url('../src/assets/pioggia.jpeg')",
                   }}
-                  className="single-card"
+                  className="single-card border border-white"
                 >
                   <CardBody>
                     <div className="d-flex fs-4">

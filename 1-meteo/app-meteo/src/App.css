@@ -3,6 +3,12 @@
 
 }
 
+.city{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 3.7em;
+}
+
 
 .container, .sideContainer{
   border: 2px solid white;
@@ -22,8 +28,10 @@
 
   .container{
     width: 100vw !important;
-    height: 80vh;
+    height: 100vh;
     border: none;
+    background-color: rgba(0, 0, 0, 0.356);
+    border-radius: 0;
     text-align: center;
   }
 
@@ -37,6 +45,7 @@
 
   .city{
     font-size: 2em;
+    margin: 0;
   }
 
 
