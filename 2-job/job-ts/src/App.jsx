@@ -12,16 +12,16 @@ function App() {
 
   return (
     <>
-       <div className="main">
+       
         
        <BrowserRouter>
          <MyNavbar/>
           <Routes>
-            <Route path="/" element={<Home/>} />   {/** */}
+            <Route path="/" element={<Home/>} />   {/** creo le due routes per cambiare pagina dalla navbar */}
             <Route path="/favourites" element={<Favourites/>} />
           </Routes>
         </BrowserRouter>           
-       </div>
+       
     </>
   )
 }

@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 
-export const favSlice = createSlice({
+export const favSlice = createSlice({  /**creo le actions nello slicer */
     name: 'fav',
     initialState: {
         value: [],

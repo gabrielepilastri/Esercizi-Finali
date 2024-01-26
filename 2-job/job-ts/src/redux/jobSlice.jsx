@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 
 
-export const jobSlice = createSlice({
+export const jobSlice = createSlice({     /**jobs è inizialmente un array vuoto e l'action prende come payload il json fetchato */
     name: "jobs",
     initialState: {
         value: [],

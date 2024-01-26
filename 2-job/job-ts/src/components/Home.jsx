@@ -9,6 +9,7 @@ import '../App.css'
 
 const Home = () => {
   const API_KEY = "https://strive-benchmark.herokuapp.com/api/jobs?search=";
+  const lastKey = "&limit=20"
   const dispatch = useDispatch();
   const jobs = useSelector((state) => state.jobs.value)
   const [input, setinput] = useState("");
@@ -19,9 +20,9 @@ const Home = () => {
   }
 
 
-    const fetchData = async () => {
+    const fetchData = async () => {             /**eseguo la fetch dei dati al click del button */
       try {
-        const response = await fetch(API_KEY + input + "&limit=20");
+        const response = await fetch(API_KEY + input + lastKey);
         
           const { data } = await response.json();
           dispatch(getJobs(data));
@@ -43,7 +44,7 @@ const Home = () => {
             <Button className="px-3 py-2" variant="info" onClick={fetchData}> <img src="../src/assets/magnifying-glass-solid.svg" alt="lens" width={20} /> </Button>
           </Col>
           <Col className="col-6 mx-auto d-flex flex-column align-items-center">
-            {jobs.map((job) => (
+            {jobs.map((job) => (               /**passo a la key e l'oggetto */
               <JobCard key={job._id} data={job} />
             ))}
           </Col>
